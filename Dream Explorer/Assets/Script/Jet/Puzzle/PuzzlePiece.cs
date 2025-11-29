@@ -1,66 +1,90 @@
 ﻿using UnityEngine;
 using UnityEngine.EventSystems;
 
+[RequireComponent(typeof(RectTransform))]
 public class PuzzlePiece : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
-    [Header("拖拽使用的 Canvas")]
-    public Canvas canvas;
+    [Header("正确槽位")]
+    public RectTransform correctSlot;
 
-    [Header("初始位置")]
-    public Vector3 originalPosition;
+    [Header("可吸附的所有槽位")]
+    public RectTransform[] slots;
 
-    [Header("可吸附槽位")]
-    public RectTransform slot; // 这个字段必须在 Inspector 指定
+    [Header("拖拽使用的摄像机")]
+    public Camera linkedCamera;
 
-    [Header("最大吸附距离")]
-    public float snapDistance = 50f;
+    [HideInInspector]
+    public Vector3 initialPosition;
 
     private RectTransform rect;
-    private CanvasGroup group;
+    private Transform originalParent;
+    public float snapDistance = 50f;
 
     private void Awake()
     {
         rect = GetComponent<RectTransform>();
-        originalPosition = rect.localPosition;
+        initialPosition = rect.position;
+    }
 
-        group = GetComponent<CanvasGroup>();
-        if (group == null)
-            group = gameObject.AddComponent<CanvasGroup>();
+    private void Update()
+    {
+        // 根据linkedCamera控制显隐
+        if (linkedCamera != null)
+            gameObject.SetActive(linkedCamera.gameObject.activeInHierarchy);
     }
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-        if (canvas == null)
-            canvas = GetComponentInParent<Canvas>();
+        if (linkedCamera == null || !linkedCamera.gameObject.activeInHierarchy)
+            return;
 
-        transform.SetParent(canvas.transform); // 拖动到最上层
-        group.blocksRaycasts = false;
+        originalParent = transform.parent;
+        transform.SetParent(transform.root); // 拖到最上层
     }
 
     public void OnDrag(PointerEventData eventData)
     {
+        if (linkedCamera == null || !linkedCamera.gameObject.activeInHierarchy)
+            return;
+
         rect.position = Input.mousePosition;
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        group.blocksRaycasts = true;
+        if (linkedCamera == null || !linkedCamera.gameObject.activeInHierarchy)
+        {
+            rect.position = initialPosition;
+            return;
+        }
 
-        if (slot != null)
+        RectTransform nearestSlot = null;
+        float minDist = float.MaxValue;
+
+        foreach (var slot in slots)
         {
-            float distance = Vector2.Distance(rect.position, slot.position);
-            if (distance <= snapDistance)
+            float dist = Vector2.Distance(rect.position, slot.position);
+            if (dist < minDist && dist <= snapDistance)
             {
-                rect.position = slot.position; // 吸附
-            }
-            else
-            {
-                rect.localPosition = originalPosition; // 回到初始位置
+                minDist = dist;
+                nearestSlot = slot;
             }
         }
+
+        if (nearestSlot != null)
+            rect.position = nearestSlot.position; // 吸附
         else
-        {
-            rect.localPosition = originalPosition;
-        }
+            rect.position = initialPosition; // 超出范围回初始位置
+
+        transform.SetParent(originalParent);
+
+        // 松手后才检查拼图完成
+        if (PuzzleManager.Instance != null)
+            PuzzleManager.Instance.CheckPuzzleCompletion();
+    }
+
+    public bool IsCorrectlyPlaced()
+    {
+        return correctSlot != null && Vector2.Distance(rect.position, correctSlot.position) <= snapDistance;
     }
 }

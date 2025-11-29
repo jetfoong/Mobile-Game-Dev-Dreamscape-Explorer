@@ -1,69 +1,92 @@
 ﻿using UnityEngine;
-using System.Collections.Generic;
 
 public class PuzzleManager : MonoBehaviour
 {
-    [Header("所有 Puzzle Pieces")]
-    public List<PuzzlePiece> puzzlePieces;
+    public static PuzzleManager Instance; // 单例
 
-    [Header("对应槽位（和 PuzzlePiece 一一对应）")]
-    public List<RectTransform> slots;
+    [Header("拼图块")]
+    public PuzzlePiece[] pieces;
 
-    [Header("当全部到位时激活的 UI")]
-    public List<GameObject> uiToActivate;
+    [Header("槽位")]
+    public RectTransform[] slots;
 
-    [Header("激活显示的摄像机")]
+    [Header("完成后要激活的UI")]
+    public GameObject[] uiToActivate;
+
+    [Header("控制显隐的摄像机")]
     public Camera linkedCamera;
 
+    private void Awake()
+    {
+        // 初始化单例
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        Instance = this;
+    }
+
     private void Update()
+    {
+        UpdateVisibility();
+    }
+
+    private void UpdateVisibility()
     {
         if (linkedCamera == null) return;
 
         bool camActive = linkedCamera.gameObject.activeInHierarchy;
 
-        // 控制 PuzzlePiece 显示/隐藏
-        foreach (var piece in puzzlePieces)
+        // 控制PuzzlePiece显隐
+        foreach (var piece in pieces)
         {
             if (piece != null)
                 piece.gameObject.SetActive(camActive);
         }
 
-        // 控制槽位显示/隐藏
+        // 控制Slot显隐
         foreach (var slot in slots)
         {
             if (slot != null)
                 slot.gameObject.SetActive(camActive);
         }
 
-        // 默认隐藏 uiToActivate
-        foreach (var ui in uiToActivate)
-        {
-            if (ui != null)
-                ui.SetActive(false);
-        }
-
-        // 检查是否全部到位
-        if (AllPiecesSnapped())
+        // 如果摄像机关闭，激活UI也要隐藏
+        if (!camActive)
         {
             foreach (var ui in uiToActivate)
             {
                 if (ui != null)
-                    ui.SetActive(camActive); // 激活 UI 并随摄像机显示
+                    ui.SetActive(false);
             }
         }
     }
 
-    private bool AllPiecesSnapped()
+    /// <summary>
+    /// 检查所有拼图块是否在正确位置
+    /// </summary>
+    public void CheckPuzzleCompletion()
     {
-        for (int i = 0; i < puzzlePieces.Count; i++)
-        {
-            var piece = puzzlePieces[i];
-            if (piece == null || i >= slots.Count || slots[i] == null) return false;
+        bool allCorrect = true;
 
-            float distance = Vector2.Distance(piece.GetComponent<RectTransform>().position, slots[i].position);
-            if (distance > piece.snapDistance)
-                return false;
+        foreach (var piece in pieces)
+        {
+            if (piece != null && !piece.IsCorrectlyPlaced())
+            {
+                allCorrect = false;
+                break;
+            }
         }
-        return true;
+
+        // 全部正确才激活UI
+        if (allCorrect)
+        {
+            foreach (var ui in uiToActivate)
+            {
+                if (ui != null)
+                    ui.SetActive(true);
+            }
+        }
     }
 }

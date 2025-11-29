@@ -1791,9 +1791,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0be179e8f130af346836689c6bd77bf5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 0}
-  originalPosition: {x: 0, y: 0, z: 0}
-  slot: {fileID: 446144548}
+  correctSlot: {fileID: 702353532}
+  slots:
+  - {fileID: 702353532}
+  - {fileID: 446144548}
+  linkedCamera: {fileID: 289024556}
+  initialPosition: {x: 0, y: 0, z: 0}
   snapDistance: 50
 --- !u!114 &893279058
 MonoBehaviour:
@@ -1808,7 +1811,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.5773585, g: 0.5773585, b: 0.5773585, a: 1}
+  m_Color: {r: 0.4037736, g: 0.4037736, b: 0.4037736, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2066,9 +2069,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0be179e8f130af346836689c6bd77bf5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 1551467988}
-  originalPosition: {x: 0, y: 0, z: 0}
-  slot: {fileID: 702353532}
+  correctSlot: {fileID: 446144548}
+  slots:
+  - {fileID: 702353532}
+  - {fileID: 446144548}
+  linkedCamera: {fileID: 289024556}
+  initialPosition: {x: 0, y: 0, z: 0}
   snapDistance: 50
 --- !u!114 &966414242
 MonoBehaviour:
@@ -2643,7 +2649,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42ec480fd0fa60c4eab227ff4649e84b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  puzzlePieces:
+  pieces:
   - {fileID: 966414241}
   - {fileID: 893279057}
   slots:
