@@ -16,6 +16,23 @@ public class DropTarget : MonoBehaviour
     [Header("动画结束后激活的物体（可选）")]
     public GameObject activateObject;
 
+    [Header("作用时播放的音效（可选）")]
+    public AudioClip sfxClip;
+
+    private AudioSource audioSource;
+
+
+    private void Awake()
+    {
+        // 自动添加 audio source（如果没有的话）
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+            audioSource = gameObject.AddComponent<AudioSource>();
+
+        audioSource.playOnAwake = false;
+    }
+
+
     // --- 播放动画 ---
     public void PlayReplaceAnimation()
     {
@@ -24,11 +41,18 @@ public class DropTarget : MonoBehaviour
 
     private IEnumerator PlayAnimation()
     {
+        // ---- 触发效果音 ----
+        if (sfxClip != null && audioSource != null)
+            audioSource.PlayOneShot(sfxClip);
+
+
+        // 播放图片动画
         for (int i = 0; i < frames.Count; i++)
         {
             if (targetRenderer != null)
                 targetRenderer.sprite = frames[i];
 
+            // 最后一帧时激活
             if (i == frames.Count - 1 && activateObject != null)
                 activateObject.SetActive(true);
 
