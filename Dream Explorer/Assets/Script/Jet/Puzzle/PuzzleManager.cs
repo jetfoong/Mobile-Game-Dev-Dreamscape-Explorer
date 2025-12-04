@@ -2,7 +2,7 @@
 
 public class PuzzleManager : MonoBehaviour
 {
-    public static PuzzleManager Instance; // 单例
+    public static PuzzleManager Instance;
 
     [Header("拼图块")]
     public PuzzlePiece[] pieces;
@@ -13,12 +13,14 @@ public class PuzzleManager : MonoBehaviour
     [Header("完成后要激活的UI")]
     public GameObject[] uiToActivate;
 
+    [Header("完成后也要激活的 Sprite/GameObject（可选）")]
+    public GameObject[] extraObjectsToActivate;   // ← 新增
+
     [Header("控制显隐的摄像机")]
     public Camera linkedCamera;
 
     private void Awake()
     {
-        // 初始化单例
         if (Instance != null && Instance != this)
         {
             Destroy(gameObject);
@@ -38,34 +40,25 @@ public class PuzzleManager : MonoBehaviour
 
         bool camActive = linkedCamera.gameObject.activeInHierarchy;
 
-        // 控制PuzzlePiece显隐
         foreach (var piece in pieces)
-        {
             if (piece != null)
                 piece.gameObject.SetActive(camActive);
-        }
 
-        // 控制Slot显隐
         foreach (var slot in slots)
-        {
             if (slot != null)
                 slot.gameObject.SetActive(camActive);
-        }
 
-        // 如果摄像机关闭，激活UI也要隐藏
+        // 摄像机关闭时隐藏UI
         if (!camActive)
         {
             foreach (var ui in uiToActivate)
-            {
-                if (ui != null)
-                    ui.SetActive(false);
-            }
+                if (ui != null) ui.SetActive(false);
+
+            foreach (var obj in extraObjectsToActivate)  // ← 新增
+                if (obj != null) obj.SetActive(false);
         }
     }
 
-    /// <summary>
-    /// 检查所有拼图块是否在正确位置
-    /// </summary>
     public void CheckPuzzleCompletion()
     {
         bool allCorrect = true;
@@ -79,14 +72,15 @@ public class PuzzleManager : MonoBehaviour
             }
         }
 
-        // 全部正确才激活UI
         if (allCorrect)
         {
+            // 激活 UI
             foreach (var ui in uiToActivate)
-            {
-                if (ui != null)
-                    ui.SetActive(true);
-            }
+                if (ui != null) ui.SetActive(true);
+
+            // 激活额外指定的 Sprite/GameObject
+            foreach (var obj in extraObjectsToActivate)   // ← 新增
+                if (obj != null) obj.SetActive(true);
         }
     }
 }
