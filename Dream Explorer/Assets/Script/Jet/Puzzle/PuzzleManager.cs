@@ -14,10 +14,15 @@ public class PuzzleManager : MonoBehaviour
     public GameObject[] uiToActivate;
 
     [Header("完成后也要激活的 Sprite/GameObject（可选）")]
-    public GameObject[] extraObjectsToActivate;   // ← 新增
+    public GameObject[] extraObjectsToActivate;
 
     [Header("控制显隐的摄像机")]
     public Camera linkedCamera;
+
+    [Header("拼图完成时触发的对话（可选）")]
+    public DialogueTrigger puzzleCompleteTrigger;   // ✅ 新增但不影响旧逻辑
+
+    private bool hasCompleted = false;   // 防止重复触发
 
     private void Awake()
     {
@@ -54,7 +59,7 @@ public class PuzzleManager : MonoBehaviour
             foreach (var ui in uiToActivate)
                 if (ui != null) ui.SetActive(false);
 
-            foreach (var obj in extraObjectsToActivate)  // ← 新增
+            foreach (var obj in extraObjectsToActivate)
                 if (obj != null) obj.SetActive(false);
         }
     }
@@ -72,15 +77,20 @@ public class PuzzleManager : MonoBehaviour
             }
         }
 
-        if (allCorrect)
+        if (allCorrect && !hasCompleted)
         {
-            // 激活 UI
+            hasCompleted = true;
+
+            // ✅ 原本功能保留
             foreach (var ui in uiToActivate)
                 if (ui != null) ui.SetActive(true);
 
-            // 激活额外指定的 Sprite/GameObject
-            foreach (var obj in extraObjectsToActivate)   // ← 新增
+            foreach (var obj in extraObjectsToActivate)
                 if (obj != null) obj.SetActive(true);
+
+            // ✅ 新增：对话触发（可选）
+            if (puzzleCompleteTrigger != null)
+                puzzleCompleteTrigger.Trigger();
         }
     }
 }
