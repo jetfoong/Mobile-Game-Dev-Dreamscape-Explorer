@@ -19,10 +19,6 @@ public class DropTarget : MonoBehaviour
     [Header("作用时播放的音效（可选）")]
     public AudioClip sfxClip;
 
-    [Header("对话触发器（可选）")]
-    public DialogueTrigger onUsedTrigger;
-
-
     private AudioSource audioSource;
 
 
@@ -45,9 +41,10 @@ public class DropTarget : MonoBehaviour
 
     private IEnumerator PlayAnimation()
     {
-        // 播放音效
+        // ---- 触发效果音 ----
         if (sfxClip != null && audioSource != null)
             audioSource.PlayOneShot(sfxClip);
+
 
         // 播放图片动画
         for (int i = 0; i < frames.Count; i++)
@@ -55,16 +52,11 @@ public class DropTarget : MonoBehaviour
             if (targetRenderer != null)
                 targetRenderer.sprite = frames[i];
 
+            // 最后一帧时激活
             if (i == frames.Count - 1 && activateObject != null)
                 activateObject.SetActive(true);
 
             yield return new WaitForSeconds(2f);
         }
-
-        // 播放对话
-        if (onUsedTrigger != null)
-            onUsedTrigger.Trigger();
     }
-
-
 }

@@ -18,8 +18,6 @@ public class PuzzleManager : MonoBehaviour
 
     [Header("控制显隐的摄像机")]
     public Camera linkedCamera;
-    [Header("拼图成功时触发对话（可选）")]
-    public DialogueTrigger puzzleCompleteTrigger;
 
     private void Awake()
     {
@@ -76,17 +74,13 @@ public class PuzzleManager : MonoBehaviour
 
         if (allCorrect)
         {
-            // 原本 UI 激活逻辑
+            // 激活 UI
             foreach (var ui in uiToActivate)
                 if (ui != null) ui.SetActive(true);
 
-            foreach (var obj in extraObjectsToActivate)
+            // 激活额外指定的 Sprite/GameObject
+            foreach (var obj in extraObjectsToActivate)   // ← 新增
                 if (obj != null) obj.SetActive(true);
-
-            // ⭐ 新增：触发拼图完成对话
-            if (puzzleCompleteTrigger != null)
-                puzzleCompleteTrigger.Trigger();
         }
-
     }
 }
