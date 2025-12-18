@@ -2,8 +2,12 @@
 using UnityEngine.EventSystems;
 
 [RequireComponent(typeof(RectTransform))]
-public class PuzzlePiece : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
+public class PuzzlePiece : MonoBehaviour,
+    IBeginDragHandler, IDragHandler, IEndDragHandler
 {
+    [Header("所属 Puzzle Manager")]
+    public PuzzleManager puzzleManager;
+
     [Header("正确槽位")]
     public RectTransform correctSlot;
 
@@ -13,46 +17,43 @@ public class PuzzlePiece : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
     [Header("拖拽使用的摄像机")]
     public Camera linkedCamera;
 
-    [HideInInspector]
-    public Vector3 initialPosition;
+    public float snapDistance = 50f;
 
     private RectTransform rect;
+    private Vector3 initialPosition;
     private Transform originalParent;
-    public float snapDistance = 50f;
+    private Canvas rootCanvas;
 
     private void Awake()
     {
         rect = GetComponent<RectTransform>();
         initialPosition = rect.position;
-    }
-
-    private void Update()
-    {
-        // 根据linkedCamera控制显隐
-        if (linkedCamera != null)
-            gameObject.SetActive(linkedCamera.gameObject.activeInHierarchy);
+        rootCanvas = GetComponentInParent<Canvas>();
     }
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-        if (linkedCamera == null || !linkedCamera.gameObject.activeInHierarchy)
-            return;
+        if (!IsCameraActive()) return;
+
+        if (puzzleManager != null)
+            puzzleManager.isDragging = true;
 
         originalParent = transform.parent;
-        transform.SetParent(transform.root); // 拖到最上层
+
+        // ⭐ 关键：只能移动到 Canvas 下
+        transform.SetParent(rootCanvas.transform, true);
     }
 
     public void OnDrag(PointerEventData eventData)
     {
-        if (linkedCamera == null || !linkedCamera.gameObject.activeInHierarchy)
-            return;
+        if (!IsCameraActive()) return;
 
-        rect.position = Input.mousePosition;
+        rect.position = eventData.position;
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        if (linkedCamera == null || !linkedCamera.gameObject.activeInHierarchy)
+        if (!IsCameraActive())
         {
             rect.position = initialPosition;
             return;
@@ -72,19 +73,28 @@ public class PuzzlePiece : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
         }
 
         if (nearestSlot != null)
-            rect.position = nearestSlot.position; // 吸附
+            rect.position = nearestSlot.position;
         else
-            rect.position = initialPosition; // 超出范围回初始位置
+            rect.position = initialPosition;
 
-        transform.SetParent(originalParent);
+        transform.SetParent(originalParent, true);
 
-        // 松手后才检查拼图完成
-        if (PuzzleManager.Instance != null)
-            PuzzleManager.Instance.CheckPuzzleCompletion();
+        if (puzzleManager != null)
+        {
+            puzzleManager.isDragging = false;
+            puzzleManager.CheckPuzzleCompletion();
+        }
+    }
+
+    private bool IsCameraActive()
+    {
+        return linkedCamera != null &&
+               linkedCamera.gameObject.activeInHierarchy;
     }
 
     public bool IsCorrectlyPlaced()
     {
-        return correctSlot != null && Vector2.Distance(rect.position, correctSlot.position) <= snapDistance;
+        return correctSlot != null &&
+               Vector2.Distance(rect.position, correctSlot.position) <= snapDistance;
     }
 }

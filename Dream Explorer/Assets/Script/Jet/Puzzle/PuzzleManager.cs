@@ -2,8 +2,6 @@
 
 public class PuzzleManager : MonoBehaviour
 {
-    public static PuzzleManager Instance;
-
     [Header("拼图块")]
     public PuzzlePiece[] pieces;
 
@@ -20,19 +18,12 @@ public class PuzzleManager : MonoBehaviour
     public Camera linkedCamera;
 
     [Header("拼图完成时触发的对话（可选）")]
-    public DialogueTrigger puzzleCompleteTrigger;   // ✅ 新增但不影响旧逻辑
+    public DialogueTrigger puzzleCompleteTrigger;
 
-    private bool hasCompleted = false;   // 防止重复触发
+    [HideInInspector]
+    public bool isDragging = false;
 
-    private void Awake()
-    {
-        if (Instance != null && Instance != this)
-        {
-            Destroy(gameObject);
-            return;
-        }
-        Instance = this;
-    }
+    private bool hasCompleted = false;
 
     private void Update()
     {
@@ -41,6 +32,7 @@ public class PuzzleManager : MonoBehaviour
 
     private void UpdateVisibility()
     {
+        if (isDragging) return;
         if (linkedCamera == null) return;
 
         bool camActive = linkedCamera.gameObject.activeInHierarchy;
@@ -53,7 +45,6 @@ public class PuzzleManager : MonoBehaviour
             if (slot != null)
                 slot.gameObject.SetActive(camActive);
 
-        // 摄像机关闭时隐藏UI
         if (!camActive)
         {
             foreach (var ui in uiToActivate)
@@ -66,31 +57,23 @@ public class PuzzleManager : MonoBehaviour
 
     public void CheckPuzzleCompletion()
     {
-        bool allCorrect = true;
+        if (hasCompleted) return;
 
         foreach (var piece in pieces)
         {
             if (piece != null && !piece.IsCorrectlyPlaced())
-            {
-                allCorrect = false;
-                break;
-            }
+                return;
         }
 
-        if (allCorrect && !hasCompleted)
-        {
-            hasCompleted = true;
+        hasCompleted = true;
 
-            // ✅ 原本功能保留
-            foreach (var ui in uiToActivate)
-                if (ui != null) ui.SetActive(true);
+        foreach (var ui in uiToActivate)
+            if (ui != null) ui.SetActive(true);
 
-            foreach (var obj in extraObjectsToActivate)
-                if (obj != null) obj.SetActive(true);
+        foreach (var obj in extraObjectsToActivate)
+            if (obj != null) obj.SetActive(true);
 
-            // ✅ 新增：对话触发（可选）
-            if (puzzleCompleteTrigger != null)
-                puzzleCompleteTrigger.Trigger();
-        }
+        if (puzzleCompleteTrigger != null)
+            puzzleCompleteTrigger.Trigger();
     }
 }
