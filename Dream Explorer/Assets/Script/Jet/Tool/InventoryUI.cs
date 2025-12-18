@@ -1,13 +1,8 @@
 ﻿using UnityEngine;
-using UnityEngine.UI;
-using System.Collections.Generic;
 
 public class InventoryUI : MonoBehaviour
 {
     public static InventoryUI Instance;
-
-    [Header("UI Canvas")]
-    public Canvas canvas;
 
     [Header("主工具栏槽位")]
     public Transform[] mainSlots;
@@ -15,22 +10,13 @@ public class InventoryUI : MonoBehaviour
     [Header("副工具栏槽位")]
     public Transform[] subSlots;
 
-    [Header("工具UI预制体")]
-    public GameObject toolPrefab;
-
     private void Awake()
     {
         Instance = this;
     }
 
-    public void UpdateCanvasCamera(Camera cam)
-    {
-        if (canvas != null)
-            canvas.worldCamera = cam;
-    }
-
-    // ⭐ 新版本 AddTool
-    public void AddTool(Sprite toolSprite, string toolID, ToolType toolType)
+    // ⭐ 新版本 AddTool：直接放已存在的 UI Image
+    public void AddTool(GameObject toolUI, string toolID, ToolType toolType)
     {
         Transform[] targetSlots =
             toolType == ToolType.Main ? mainSlots : subSlots;
@@ -51,15 +37,12 @@ public class InventoryUI : MonoBehaviour
             return;
         }
 
-        GameObject uiTool = Instantiate(toolPrefab, emptySlot);
+        // 将场景里已有的 UI Image 移动到槽位
+        toolUI.transform.SetParent(emptySlot, false);
+        toolUI.SetActive(true);
 
-        Image img = uiTool.GetComponent<Image>();
-        UIDragItem dragItem = uiTool.GetComponent<UIDragItem>();
-        RectTransform rt = uiTool.GetComponent<RectTransform>();
-
-        if (img != null)
-            img.sprite = toolSprite;
-
+        // 设置 UIDragItem
+        UIDragItem dragItem = toolUI.GetComponent<UIDragItem>();
         if (dragItem != null)
         {
             dragItem.toolID = toolID;
