@@ -9,48 +9,45 @@ public class InventoryUI : MonoBehaviour
     [Header("UI Canvas")]
     public Canvas canvas;
 
-    [Header("工具栏槽位")]
-    public Transform[] slots;
+    [Header("主工具栏槽位")]
+    public Transform[] mainSlots;
+
+    [Header("副工具栏槽位")]
+    public Transform[] subSlots;
 
     [Header("工具UI预制体")]
     public GameObject toolPrefab;
-
-    private List<GameObject> toolsInBar = new List<GameObject>();
 
     private void Awake()
     {
         Instance = this;
     }
 
-    // 切换摄像机时调用
     public void UpdateCanvasCamera(Camera cam)
     {
         if (canvas != null)
             canvas.worldCamera = cam;
     }
 
-    // 添加工具到工具栏
-    public void AddTool(Sprite toolSprite, string toolID)
+    // ⭐ 新版本 AddTool
+    public void AddTool(Sprite toolSprite, string toolID, ToolType toolType)
     {
-        if (toolPrefab == null)
-        {
-            Debug.LogError("Tool prefab is not assigned in InventoryUI!");
-            return;
-        }
+        Transform[] targetSlots =
+            toolType == ToolType.Main ? mainSlots : subSlots;
 
         Transform emptySlot = null;
-        for (int i = 0; i < slots.Length; i++)
+        foreach (var slot in targetSlots)
         {
-            if (slots[i].childCount == 0)
+            if (slot.childCount == 0)
             {
-                emptySlot = slots[i];
+                emptySlot = slot;
                 break;
             }
         }
 
         if (emptySlot == null)
         {
-            Debug.LogWarning("No empty slot available in the tool bar!");
+            Debug.LogWarning("No empty slot in " + toolType + " toolbar");
             return;
         }
 
@@ -60,25 +57,15 @@ public class InventoryUI : MonoBehaviour
         UIDragItem dragItem = uiTool.GetComponent<UIDragItem>();
         RectTransform rt = uiTool.GetComponent<RectTransform>();
 
-        if (img != null) img.sprite = toolSprite;
-        else Debug.LogError("Tool prefab missing Image component!");
+        if (img != null)
+            img.sprite = toolSprite;
 
         if (dragItem != null)
         {
-            dragItem.homeSlot = emptySlot;
             dragItem.toolID = toolID;
-
-            // 立即对齐槽位
-            if (rt != null)
-            {
-                dragItem.ReturnToSlot();
-            }
+            dragItem.toolType = toolType;
+            dragItem.homeSlot = emptySlot;
+            dragItem.ReturnToSlot();
         }
-        else
-        {
-            Debug.LogError("Tool prefab missing UIDragItem component!");
-        }
-
-        toolsInBar.Add(uiTool);
     }
 }

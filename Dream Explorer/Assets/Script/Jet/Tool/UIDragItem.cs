@@ -1,9 +1,17 @@
 ﻿using UnityEngine;
 using UnityEngine.EventSystems;
+using static Unity.VisualScripting.Dependencies.Sqlite.SQLite3;
+
+public enum ToolType
+{
+    Main,   
+    Sub     
+}
 
 public class UIDragItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
     public string toolID;
+    public ToolType toolType;
     [HideInInspector] public Transform homeSlot;
 
     private Canvas canvas;

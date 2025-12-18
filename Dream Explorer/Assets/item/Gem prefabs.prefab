@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4534363626666719253}
   - component: {fileID: -7426928497418122573}
   m_Layer: 0
-  m_Name: Tool Prefabs
+  m_Name: Gem prefabs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -115,6 +115,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d232b3ecbb34ab4ca62d42d193e5132, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIDragItem
-  toolID: 
-  toolType: 0
   homeSlot: {fileID: 0}

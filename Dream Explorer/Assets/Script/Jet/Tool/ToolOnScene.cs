@@ -3,15 +3,27 @@ using UnityEngine.EventSystems;
 
 public class ToolOnScene : MonoBehaviour, IPointerClickHandler
 {
-    public Sprite toolSprite; // 点击后生成工具栏的 Sprite
-    public string toolID;     // 工具唯一 ID
+    public Sprite toolSprite;
+    public string toolID;
+    public ToolType toolType;
+
+    [Header("是否可以被拾取")]
+    public bool canPickUp = true;   // ⭐ 新增
 
     public void OnPointerClick(PointerEventData eventData)
     {
+        // ❌ 不可拾取 → 直接返回
+        if (!canPickUp)
+        {
+            // 可选：提示、音效、抖动等
+            Debug.Log($"Tool {toolID} cannot be picked up yet.");
+            return;
+        }
+
+        // ✅ 可拾取 → 原逻辑
         if (InventoryUI.Instance != null && toolSprite != null)
         {
-            InventoryUI.Instance.AddTool(toolSprite, toolID);
-            // 可选：点击后隐藏或销毁场景工具
+            InventoryUI.Instance.AddTool(toolSprite, toolID, toolType);
             gameObject.SetActive(false);
         }
     }

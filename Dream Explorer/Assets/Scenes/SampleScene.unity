@@ -321,7 +321,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &66585736
 Transform:
   m_ObjectHideFlags: 0
@@ -331,7 +331,7 @@ Transform:
   m_GameObject: {fileID: 66585735}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1061.4, y: -574, z: 0}
+  m_LocalPosition: {x: -1030.23, y: -572.15, z: 0}
   m_LocalScale: {x: 3.979587, y: 3.2543182, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -480,8 +480,8 @@ Transform:
   m_GameObject: {fileID: 100184641}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.2, y: 7.8, z: 0}
-  m_LocalScale: {x: 19.993465, y: 24.927197, z: 1}
+  m_LocalPosition: {x: -5.6686, y: 7.8, z: 0}
+  m_LocalScale: {x: 24.304258, y: 24.927197, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1071685288}
@@ -520,17 +520,17 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.0074806213, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.73, y: 1.35}
+    oldSize: {x: 3, y: 1.3505859}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 3.73, y: 1.35}
+  m_Size: {x: 2.9669719, y: 1.35}
   m_EdgeRadius: 0
 --- !u!212 &100184644
 SpriteRenderer:
@@ -576,7 +576,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -4978497341400630138, guid: 3cbe2807a0b79864a8d1b64eea9c7252, type: 3}
+  m_Sprite: {fileID: 7800900379238731043, guid: fa496a9a2226f6247a82035018a1b728, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -633,8 +633,8 @@ Transform:
   m_GameObject: {fileID: 161660098}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1027.6, y: -579.3, z: 0}
-  m_LocalScale: {x: 4.074106, y: 3.2543182, z: 1}
+  m_LocalPosition: {x: -1044.2, y: -579, z: 0}
+  m_LocalScale: {x: 1.8282075, y: 1.9253917, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 591667425}
@@ -673,17 +673,17 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.020784616, y: -0.00000059604645}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.25, y: 2.25}
+    oldSize: {x: 4.14, y: 4.04}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 2.25, y: 2.25}
+  m_Size: {x: 3.2063193, y: 4.303006}
   m_EdgeRadius: 0
 --- !u!114 &161660101
 MonoBehaviour:
@@ -697,7 +697,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e76ae6e400d803c468442befc279ed0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ToolOnScene
-  toolSprite: {fileID: 3329271629195840803, guid: b674744e8df0f6245886a676378350cd, type: 3}
+  toolSprite: {fileID: -4696760917660491729, guid: 9a234dd6c84621c45b4eeee75fcf2fde, type: 3}
   toolID: bucket
 --- !u!212 &161660102
 SpriteRenderer:
@@ -743,7 +743,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: 8957324059118975939, guid: 7f97a5cafa1868f40b649b39b87cd3a8, type: 3}
+  m_Sprite: {fileID: -4696760917660491729, guid: 9a234dd6c84621c45b4eeee75fcf2fde, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -922,7 +922,7 @@ GameObject:
   - component: {fileID: 289024558}
   - component: {fileID: 289024557}
   m_Layer: 0
-  m_Name: Camera Main Room
+  m_Name: Camera Occean
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1056,11 +1056,11 @@ Transform:
   m_GameObject: {fileID: 289024555}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.1, y: 7.8, z: -10}
+  m_LocalPosition: {x: 0.3999939, y: 0.40000534, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1071685288}
+  m_Father: {fileID: 938276224}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &317184108
 GameObject:
@@ -1359,8 +1359,8 @@ Transform:
   m_GameObject: {fileID: 350328231}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -35.9, y: 16.8, z: 0}
-  m_LocalScale: {x: 10.278398, y: 4.561445, z: 1}
+  m_LocalPosition: {x: 20.5619, y: 4.4836, z: 0}
+  m_LocalScale: {x: 13.554122, y: 25.770903, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1071685288}
@@ -1471,7 +1471,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 100
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.5613208, g: 0.7050858, b: 1, a: 1}
+  m_Color: {r: 0.5613208, g: 0.7050858, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2540,8 +2540,8 @@ Transform:
   m_GameObject: {fileID: 734992875}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.9, y: 16.4, z: 0}
-  m_LocalScale: {x: 11.442055, y: 5.3375206, z: 1}
+  m_LocalPosition: {x: -15.7014, y: 7.3002, z: 0}
+  m_LocalScale: {x: 6.9354024, y: 10.391411, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1071685288}
@@ -2637,7 +2637,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 100
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.5660378, g: 0.37112856, b: 0.44914922, a: 1}
+  m_Color: {r: 0.5660378, g: 0.37112856, b: 0.44914922, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2692,11 +2692,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameScene
   scenes:
-  - sceneName: Occean
+  - sceneName: Main Room
     camera: {fileID: 1206987767}
   - sceneName: Volcano
     camera: {fileID: 1012732843}
-  - sceneName: Main Room
+  - sceneName: Occean
     camera: {fileID: 289024556}
   - sceneName: Dessert
     camera: {fileID: 2129208845}
@@ -3015,9 +3015,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1206987763}
   - {fileID: 1941394578}
   - {fileID: 1600697025}
+  - {fileID: 289024560}
   m_Father: {fileID: 783585077}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &940103433
@@ -3092,7 +3092,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.25, y: 2.25}
+    oldSize: {x: 4.14, y: 4.04}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -3112,7 +3112,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e76ae6e400d803c468442befc279ed0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ToolOnScene
-  toolSprite: {fileID: 3329271629195840803, guid: b674744e8df0f6245886a676378350cd, type: 3}
+  toolSprite: {fileID: -4696760917660491729, guid: 9a234dd6c84621c45b4eeee75fcf2fde, type: 3}
   toolID: 'bucket '
 --- !u!212 &940103437
 SpriteRenderer:
@@ -3158,7 +3158,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: 8957324059118975939, guid: 7f97a5cafa1868f40b649b39b87cd3a8, type: 3}
+  m_Sprite: {fileID: -4696760917660491729, guid: 9a234dd6c84621c45b4eeee75fcf2fde, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3326,6 +3326,135 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!1 &974286714
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 974286716}
+  - component: {fileID: 974286715}
+  m_Layer: 0
+  m_Name: BGM
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &974286715
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 974286714}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 8300000, guid: de84ed1f27afe8e49b458b8d47b5d27d, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &974286716
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 974286714}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1066.9994, y: 613.8068, z: -2.196807}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &980218071
 GameObject:
   m_ObjectHideFlags: 0
@@ -4017,12 +4146,12 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 289024560}
   - {fileID: 100184642}
   - {fileID: 350328232}
   - {fileID: 1681897555}
   - {fileID: 734992876}
   - {fileID: 1861084082}
+  - {fileID: 1206987763}
   m_Father: {fileID: 783585077}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1102519567
@@ -4073,7 +4202,7 @@ GameObject:
   - component: {fileID: 1206987765}
   - component: {fileID: 1206987764}
   m_Layer: 0
-  m_Name: Camera Occean
+  m_Name: Camera Main Room
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4088,11 +4217,11 @@ Transform:
   m_GameObject: {fileID: 1206987762}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.2, y: 0, z: -10}
+  m_LocalPosition: {x: -5.7000046, y: 7.5999985, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 938276224}
+  m_Father: {fileID: 1071685288}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1206987764
 MonoBehaviour:
@@ -5096,8 +5225,8 @@ Transform:
   m_GameObject: {fileID: 1681897554}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -19.6, y: 16.8, z: 0}
-  m_LocalScale: {x: 15.8506155, y: 5.404564, z: 1}
+  m_LocalPosition: {x: -26.7181, y: 7.4805, z: 0}
+  m_LocalScale: {x: 4.419807, y: 6.0487833, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1071685288}
@@ -5193,7 +5322,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 10
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 0.7902223, b: 0, a: 1}
+  m_Color: {r: 1, g: 0.7902223, b: 0, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -5753,8 +5882,8 @@ Transform:
   m_GameObject: {fileID: 1861084081}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 21.8, y: 16.5, z: 0}
-  m_LocalScale: {x: 11.442055, y: 5.3375206, z: 1}
+  m_LocalPosition: {x: -0.3152, y: 6.2898, z: 0}
+  m_LocalScale: {x: 9.922733, y: 15.445057, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1071685288}
@@ -5865,7 +5994,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 100
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 0.8851458, b: 0, a: 1}
+  m_Color: {r: 1, g: 0.8851458, b: 0, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -6574,3 +6703,4 @@ SceneRoots:
   - {fileID: 1551467989}
   - {fileID: 1461583807}
   - {fileID: 995476324}
+  - {fileID: 974286716}
