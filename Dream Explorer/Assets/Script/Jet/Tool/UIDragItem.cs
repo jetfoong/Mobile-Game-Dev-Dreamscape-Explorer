@@ -1,24 +1,26 @@
 ﻿using UnityEngine;
 using UnityEngine.EventSystems;
-using static Unity.VisualScripting.Dependencies.Sqlite.SQLite3;
+using System.Collections.Generic;
 
 public enum ToolType
 {
-    Main,   
-    Sub     
+    Main,
+    Sub
 }
 
-public class UIDragItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
+public class UIDragItem : MonoBehaviour,
+    IBeginDragHandler, IDragHandler, IEndDragHandler
 {
     public string toolID;
     public ToolType toolType;
+
     [HideInInspector] public Transform homeSlot;
 
     private Canvas canvas;
     private CanvasGroup canvasGroup;
     private RectTransform rect;
 
-    void Awake()
+    private void Awake()
     {
         rect = GetComponent<RectTransform>();
         canvasGroup = GetComponent<CanvasGroup>();
@@ -39,44 +41,41 @@ public class UIDragItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
     {
         canvasGroup.blocksRaycasts = true;
 
-        var obj = eventData.pointerEnter;
-        if (obj == null)
-        {
-            ReturnToSlot();
-            return;
-        }
+        // ⭐ 核心：获取所有命中的对象（而不是 pointerEnter）
+        List<RaycastResult> results = new List<RaycastResult>();
+        EventSystem.current.RaycastAll(eventData, results);
 
-        // ⭐ 优先检测吸附目标
-        var snapTarget = obj.GetComponent<UISnapTarget>();
-        if (snapTarget != null)
+        bool usedAny = false;
+
+        foreach (var hit in results)
         {
-            if (string.IsNullOrEmpty(snapTarget.acceptToolID) ||
-                snapTarget.acceptToolID == toolID)
+            // ① 拼图吸附（如果你有）
+            var snapTarget = hit.gameObject.GetComponent<UISnapTarget>();
+            if (snapTarget != null &&
+                (string.IsNullOrEmpty(snapTarget.acceptToolID) ||
+                 snapTarget.acceptToolID == toolID))
             {
                 snapTarget.Snap(this);
+                ReturnToSlot();
                 return;
+            }
+
+            // ② DropTarget（⭐ 可多个）
+            var dropTarget = hit.gameObject.GetComponent<DropTarget>();
+            if (dropTarget != null && dropTarget.acceptToolID == toolID)
+            {
+                dropTarget.PlayReplaceAnimation();
+                usedAny = true;
             }
         }
 
-        // 原有 DropTarget 逻辑
-        var target = obj.GetComponent<DropTarget>();
-        if (target == null || target.acceptToolID != toolID)
-        {
-            ReturnToSlot();
-            return;
-        }
-
-        target.PlayReplaceAnimation();
+        // 无论命中 0 个还是多个，最后都回槽
         ReturnToSlot();
     }
-
 
     public void ReturnToSlot()
     {
         if (homeSlot != null)
-        {
-            var rect = GetComponent<RectTransform>();
             rect.position = homeSlot.position;
-        }
     }
 }
