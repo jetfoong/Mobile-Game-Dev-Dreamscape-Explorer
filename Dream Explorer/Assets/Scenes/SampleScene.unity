@@ -2970,6 +2970,44 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 199105743}
   m_CullTransparentMesh: 1
+--- !u!1 &215038930
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 215038931}
+  m_Layer: 0
+  m_Name: button
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &215038931
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 215038930}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1453890268}
+  - {fileID: 1413979390}
+  - {fileID: 566814076}
+  - {fileID: 1715150216}
+  - {fileID: 398581639}
+  - {fileID: 880390310}
+  - {fileID: 569047568}
+  m_Father: {fileID: 1461583807}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &217714232
 GameObject:
   m_ObjectHideFlags: 0
@@ -3676,7 +3714,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 100
+  m_SortingOrder: 5
   m_Sprite: {fileID: 9164359298635338950, guid: 7ab02ee3af3bea94992a98abdc267527, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -4197,7 +4235,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Button
   gameScene: {fileID: 783585076}
   targetSceneName: Occean
-  onClickTrigger: {fileID: 0}
+  onClickTrigger: {fileID: 1715150217}
 --- !u!61 &350328234
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4495,6 +4533,58 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 392859151}
   m_CullTransparentMesh: 1
+--- !u!1 &398581638
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 398581639}
+  - component: {fileID: 398581640}
+  m_Layer: 0
+  m_Name: gem place
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &398581639
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 398581638}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 215038931}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &398581640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 398581638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 288d9d23376032340a65c4afa83cafdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerType: 2
+  dialogueLines:
+  - There are several slots on this table.
+  - They might be the key to leaving this place.
+  - "For reasons I can\u2019t explain, I firmly believe this."
+  - "There\u2019s also a knife on the table. I think it might be useful,better take
+    it with me."
+  triggerOnce: 1
 --- !u!1 &410521759
 GameObject:
   m_ObjectHideFlags: 0
@@ -6201,6 +6291,54 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 553830799}
   m_CullTransparentMesh: 1
+--- !u!1 &566814075
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 566814076}
+  - component: {fileID: 566814077}
+  m_Layer: 0
+  m_Name: desert
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &566814076
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 566814075}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 215038931}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &566814077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 566814075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 288d9d23376032340a65c4afa83cafdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerType: 2
+  dialogueLines:
+  - "This looks like a desert\u2026 it\u2019s so hot"
+  triggerOnce: 1
 --- !u!1 &568956318
 GameObject:
   m_ObjectHideFlags: 0
@@ -6235,6 +6373,61 @@ Transform:
   - {fileID: 1196936744}
   m_Father: {fileID: 783585077}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &569047567
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 569047568}
+  - component: {fileID: 569047569}
+  m_Layer: 0
+  m_Name: valley
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &569047568
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 569047567}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 215038931}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &569047569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 569047567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 288d9d23376032340a65c4afa83cafdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerType: 2
+  dialogueLines:
+  - "I remember this used to be a river\u2026 how did it turn into a valley now?"
+  - It seems the volcanic eruption triggered tectonic activity, which turned this
+    place into a valley.
+  - But how did it change so quickly?
+  - "Whatever. It\u2019s just a dream anyway, so there\u2019s no need to worry about
+    these absurd things."
+  - 'I remember Geo teacher taught us that in the cracks of valleys formed by such
+    tectonic activity, we can find... '
+  triggerOnce: 1
 --- !u!1 &576393175
 GameObject:
   m_ObjectHideFlags: 0
@@ -6963,7 +7156,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Button
   gameScene: {fileID: 783585076}
   targetSceneName: Gem Place
-  onClickTrigger: {fileID: 0}
+  onClickTrigger: {fileID: 398581640}
 --- !u!61 &672259074
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7472,7 +7665,7 @@ MonoBehaviour:
   frames:
   - {fileID: 2980781503395290667, guid: 0f099538a7a8f094fa3171ae23ebd83e, type: 3}
   activateObject: {fileID: 0}
-  sfxClip: {fileID: 8300000, guid: e30912eced7eb9e409c6769ddb6eb8f4, type: 3}
+  sfxClip: {fileID: 8300000, guid: 39735624987fe95468815af6d2a2d604, type: 3}
   onUsedTrigger: {fileID: 696647181}
 --- !u!61 &728784158
 BoxCollider2D:
@@ -7866,7 +8059,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Button
   gameScene: {fileID: 783585076}
   targetSceneName: Dessert
-  onClickTrigger: {fileID: 0}
+  onClickTrigger: {fileID: 566814077}
 --- !u!61 &734992881
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8661,7 +8854,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 100
+  m_SortingOrder: 5
   m_Sprite: {fileID: 9164359298635338950, guid: 7ab02ee3af3bea94992a98abdc267527, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -8701,7 +8894,7 @@ Transform:
   m_GameObject: {fileID: 833951941}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -66.65, y: -10.25, z: 0}
+  m_LocalPosition: {x: -65.86, y: -13.58, z: 0}
   m_LocalScale: {x: 1.5888319, y: 1.3789363, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8741,17 +8934,17 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.037473142}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.42, y: 3.32}
+    oldSize: {x: 3.28, y: 1.62}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 3.42, y: 3.32}
+  m_Size: {x: 3.42, y: 1.633557}
   m_EdgeRadius: 0
 --- !u!114 &833951944
 MonoBehaviour:
@@ -8767,7 +8960,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Button
   gameScene: {fileID: 783585076}
   targetSceneName: Main Room
-  onClickTrigger: {fileID: 0}
+  onClickTrigger: {fileID: 1453890269}
 --- !u!212 &833951945
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8812,7 +9005,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 100
-  m_Sprite: {fileID: 1088242765621372391, guid: eff9ddaf5a5c02247a70d573fae7031d, type: 3}
+  m_Sprite: {fileID: 3980168229369012863, guid: 30656b8dbc087534f9c91464830f64ca, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -9186,6 +9379,54 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &880390309
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 880390310}
+  - component: {fileID: 880390311}
+  m_Layer: 0
+  m_Name: river
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &880390310
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 880390309}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 215038931}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &880390311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 880390309}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 288d9d23376032340a65c4afa83cafdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerType: 2
+  dialogueLines:
+  - A river, and the land around it is completely bare.
+  triggerOnce: 1
 --- !u!1 &886814862
 GameObject:
   m_ObjectHideFlags: 0
@@ -12413,9 +12654,9 @@ MonoBehaviour:
   targetRenderer: {fileID: 1196936748}
   frames:
   - {fileID: -2442132828716267026, guid: b8a8804db8f08eb43a5fd474a4661edd, type: 3}
-  activateObject: {fileID: 1417041563}
-  sfxClip: {fileID: 8300000, guid: e30912eced7eb9e409c6769ddb6eb8f4, type: 3}
-  onUsedTrigger: {fileID: 0}
+  activateObject: {fileID: 1502807533}
+  sfxClip: {fileID: 8300000, guid: 94e922b6368744448a1282e9aef9e6bf, type: 3}
+  onUsedTrigger: {fileID: 1759720130}
 --- !u!212 &1196936748
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -12930,7 +13171,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialoguePanel: {fileID: 1415430756}
   dialogueText: {fileID: 1338591006}
-  typingSpeed: 0.1
+  typingSpeed: 0.02
 --- !u!1 &1257464584
 GameObject:
   m_ObjectHideFlags: 0
@@ -14037,6 +14278,55 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1413979389
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1413979390}
+  - component: {fileID: 1413979391}
+  m_Layer: 0
+  m_Name: volcano
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1413979390
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1413979389}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 215038931}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1413979391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1413979389}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 288d9d23376032340a65c4afa83cafdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerType: 2
+  dialogueLines:
+  - Vol...Volcano??
+  - This place is incredible. These doors are connected to such bizarre places.
+  triggerOnce: 1
 --- !u!1 &1415430756
 GameObject:
   m_ObjectHideFlags: 0
@@ -14141,8 +14431,8 @@ Transform:
   m_GameObject: {fileID: 1417041563}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.1769916, w: 0.98421234}
-  m_LocalPosition: {x: -719.7, y: -531.2, z: 0}
-  m_LocalScale: {x: 0.40853035, y: 0.31828526, z: 1}
+  m_LocalPosition: {x: -942.1, y: -529, z: 0}
+  m_LocalScale: {x: 0.66655815, y: 0.43767408, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 591667425}
@@ -14416,7 +14706,7 @@ GameObject:
   - component: {fileID: 1453890268}
   - component: {fileID: 1453890269}
   m_Layer: 0
-  m_Name: dialogue (button)
+  m_Name: start
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14435,7 +14725,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1461583807}
+  m_Father: {fileID: 215038931}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1453890269
 MonoBehaviour:
@@ -14451,7 +14741,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   triggerType: 2
   dialogueLines:
-  - volcano!
+  - 'What just happened? Whre I am? '
+  - "I think I fell asleep\u2026 is this a dream?"
+  - "No matter what, I should look around first and see what\u2019s going on nearby."
   triggerOnce: 1
 --- !u!1 &1454124458
 GameObject:
@@ -14633,12 +14925,11 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1221121109}
-  - {fileID: 1939503420}
   - {fileID: 2006601015}
   - {fileID: 696647180}
-  - {fileID: 1453890268}
-  - {fileID: 1963970037}
   - {fileID: 947372520}
+  - {fileID: 215038931}
+  - {fileID: 2071399120}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1475272226
@@ -14839,7 +15130,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Button
   gameScene: {fileID: 783585076}
   targetSceneName: Valley Rock Crack
-  onClickTrigger: {fileID: 1963970038}
+  onClickTrigger: {fileID: 569047569}
 --- !u!61 &1479954805
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14969,8 +15260,8 @@ Transform:
   m_GameObject: {fileID: 1502807533}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -942.5, y: -528.5, z: 0}
-  m_LocalScale: {x: 2.3854516, y: 1.7942221, z: 1}
+  m_LocalPosition: {x: -720.5, y: -530.4, z: 0}
+  m_LocalScale: {x: 1.4377682, y: 1.0646914, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 591667425}
@@ -16635,7 +16926,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Button
   gameScene: {fileID: 783585076}
   targetSceneName: Volcano
-  onClickTrigger: {fileID: 1453890269}
+  onClickTrigger: {fileID: 1413979391}
 --- !u!61 &1681897560
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16832,7 +17123,7 @@ MonoBehaviour:
   - {fileID: 914895193227001258, guid: 7b9f49974426a44478fbd7ba558aa8fd, type: 3}
   - {fileID: -8105679593611658675, guid: 7368246d9f323864eb0f1ee640bb0743, type: 3}
   activateObject: {fileID: 0}
-  sfxClip: {fileID: 8300000, guid: e30912eced7eb9e409c6769ddb6eb8f4, type: 3}
+  sfxClip: {fileID: 8300000, guid: 601e4f220d21ff74ab793c6424e9838d, type: 3}
   onUsedTrigger: {fileID: 0}
 --- !u!61 &1688320884
 BoxCollider2D:
@@ -17446,6 +17737,55 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1715150215
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1715150216}
+  - component: {fileID: 1715150217}
+  m_Layer: 0
+  m_Name: occean
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1715150216
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1715150215}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 215038931}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1715150217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1715150215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 288d9d23376032340a65c4afa83cafdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerType: 2
+  dialogueLines:
+  - Is this a beach?
+  - Why is there a dark cloud here, so out of place with the surroundings
+  triggerOnce: 1
 --- !u!1 &1719570727
 GameObject:
   m_ObjectHideFlags: 0
@@ -18038,6 +18378,54 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!1 &1759720128
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1759720129}
+  - component: {fileID: 1759720130}
+  m_Layer: 0
+  m_Name: valley pickaxe
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1759720129
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1759720128}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2071399120}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1759720130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1759720128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 288d9d23376032340a65c4afa83cafdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerType: 1
+  dialogueLines:
+  - "Got it! As expected, it\u2019s obsidian."
+  triggerOnce: 1
 --- !u!1 &1772232659
 GameObject:
   m_ObjectHideFlags: 0
@@ -18188,8 +18576,8 @@ MonoBehaviour:
   - {fileID: 914895193227001258, guid: 7b9f49974426a44478fbd7ba558aa8fd, type: 3}
   - {fileID: -8105679593611658675, guid: 7368246d9f323864eb0f1ee640bb0743, type: 3}
   - {fileID: 7833847278638732049, guid: f7ba0ff4f77daad4a9eeda5ec1a37e07, type: 3}
-  activateObject: {fileID: 1502807533}
-  sfxClip: {fileID: 8300000, guid: e30912eced7eb9e409c6769ddb6eb8f4, type: 3}
+  activateObject: {fileID: 1417041563}
+  sfxClip: {fileID: 8300000, guid: 05b36727e28373c4e99d546ea58bb1a9, type: 3}
   onUsedTrigger: {fileID: 0}
 --- !u!61 &1772232663
 BoxCollider2D:
@@ -18716,7 +19104,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Button
   gameScene: {fileID: 783585076}
   targetSceneName: Valley
-  onClickTrigger: {fileID: 0}
+  onClickTrigger: {fileID: 880390311}
 --- !u!61 &1861084084
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -18919,54 +19307,6 @@ MonoBehaviour:
   uiToActivate:
   - {fileID: 371630474}
   extraObjectsToActivate: []
---- !u!1 &1939503419
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1939503420}
-  - component: {fileID: 1939503421}
-  m_Layer: 0
-  m_Name: dialogue (start)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1939503420
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1939503419}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1461583807}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1939503421
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1939503419}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 288d9d23376032340a65c4afa83cafdb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  triggerType: 0
-  dialogueLines:
-  - game start
-  triggerOnce: 1
 --- !u!1 &1941394577
 GameObject:
   m_ObjectHideFlags: 0
@@ -19120,7 +19460,7 @@ MonoBehaviour:
   frames:
   - {fileID: -5603678524673250883, guid: 0cf7a566ab563ee4083ccf7e2f778612, type: 3}
   activateObject: {fileID: 1953554291}
-  sfxClip: {fileID: 8300000, guid: e30912eced7eb9e409c6769ddb6eb8f4, type: 3}
+  sfxClip: {fileID: 8300000, guid: a37ce7fefaa44034ca6eab870848d486, type: 3}
   onUsedTrigger: {fileID: 2006601016}
 --- !u!82 &1941394583
 AudioSource:
@@ -19271,7 +19611,7 @@ MonoBehaviour:
   frames:
   - {fileID: 3836439204189473009, guid: b7d5557bfeddf5647b98881bd176d215, type: 3}
   activateObject: {fileID: 42425160}
-  sfxClip: {fileID: 0}
+  sfxClip: {fileID: 8300000, guid: c1124ce0f62a71c479b2bfc213c2f8b1, type: 3}
   onUsedTrigger: {fileID: 0}
 --- !u!61 &1953554294
 BoxCollider2D:
@@ -19390,54 +19730,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &1963970036
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1963970037}
-  - component: {fileID: 1963970038}
-  m_Layer: 0
-  m_Name: Button Valley Rock Crack
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1963970037
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1963970036}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1461583807}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1963970038
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1963970036}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 288d9d23376032340a65c4afa83cafdb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  triggerType: 2
-  dialogueLines:
-  - Valley Rock Crack
-  triggerOnce: 1
 --- !u!1 &1976797606
 GameObject:
   m_ObjectHideFlags: 0
@@ -19778,6 +20070,38 @@ Transform:
   - {fileID: 489339722}
   m_Father: {fileID: 783585077}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2071399119
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2071399120}
+  m_Layer: 0
+  m_Name: Drop Target
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2071399120
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2071399119}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1759720129}
+  m_Father: {fileID: 1461583807}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2073549094
 GameObject:
   m_ObjectHideFlags: 0
@@ -20077,7 +20401,7 @@ MonoBehaviour:
   frames:
   - {fileID: -1869529467169617012, guid: 45808a4e4ddc2d24aa1f01208565a5b7, type: 3}
   activateObject: {fileID: 345728987}
-  sfxClip: {fileID: 8300000, guid: e30912eced7eb9e409c6769ddb6eb8f4, type: 3}
+  sfxClip: {fileID: 8300000, guid: 94e922b6368744448a1282e9aef9e6bf, type: 3}
   onUsedTrigger: {fileID: 0}
 --- !u!61 &2073702745
 BoxCollider2D:
