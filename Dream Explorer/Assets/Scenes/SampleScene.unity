@@ -444,7 +444,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 625, y: 413.13}
+  m_AnchoredPosition: {x: 633.92, y: 150}
   m_SizeDelta: {x: 581.8522, y: 169.0667}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!225 &31754704
@@ -1904,8 +1904,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 40.068}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -218, y: 310}
-  m_SizeDelta: {x: 216.2428, y: 119.8085}
+  m_AnchoredPosition: {x: -223.02368, y: 315.97266}
+  m_SizeDelta: {x: 216.2428, y: 104.1995}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &127282915
 MonoBehaviour:
@@ -1954,7 +1954,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 4145100776150910970, guid: 23f81916ac6f2f5449a9e671e4b5ba44, type: 3}
+  m_Sprite: {fileID: -6926562784561208882, guid: fdab96068af85b445baa710e791cc7a0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2174,7 +2174,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Button
   gameScene: {fileID: 783585076}
   targetSceneName: Teacher Room
-  onClickTrigger: {fileID: 1453890269}
+  onClickTrigger: {fileID: 1665749610}
 --- !u!212 &144028499
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2611,6 +2611,55 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &161819244
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 161819245}
+  - component: {fileID: 161819246}
+  m_Layer: 0
+  m_Name: stove
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &161819245
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 161819244}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2071399120}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &161819246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 161819244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 288d9d23376032340a65c4afa83cafdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerType: 1
+  dialogueLines:
+  - "Whoa, something\u2019s running out of the water bottle!"
+  - If I increase the heat, will more of them appear?
+  triggerOnce: 1
 --- !u!1 &168616234
 GameObject:
   m_ObjectHideFlags: 0
@@ -3006,6 +3055,11 @@ Transform:
   - {fileID: 398581639}
   - {fileID: 880390310}
   - {fileID: 569047568}
+  - {fileID: 664369540}
+  - {fileID: 1665749609}
+  - {fileID: 1179405932}
+  - {fileID: 1893159332}
+  - {fileID: 2119342736}
   m_Father: {fileID: 1461583807}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &217714232
@@ -3576,6 +3630,56 @@ Transform:
   m_Children: []
   m_Father: {fileID: 938276224}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &294148055
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 294148056}
+  - component: {fileID: 294148057}
+  m_Layer: 0
+  m_Name: volcano eruption
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &294148056
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 294148055}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2071399120}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &294148057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 294148055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 288d9d23376032340a65c4afa83cafdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerType: 1
+  dialogueLines:
+  - Sapphires require extremely high temperatures to form, so they might exist beneath
+    volcanoes
+  - When a volcano erupts, it can bring these rare stones to the surface
+  triggerOnce: 1
 --- !u!1 &297411986
 GameObject:
   m_ObjectHideFlags: 0
@@ -4913,7 +5017,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.8490566, g: 0.17221431, b: 0.17221431, a: 0.4745098}
+  m_Color: {r: 0.8490566, g: 0.17221431, b: 0.17221431, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -6266,7 +6370,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.06132078, b: 0.06132078, a: 0.3019608}
+  m_Color: {r: 1, g: 0.06132078, b: 0.06132078, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -7107,6 +7211,57 @@ Transform:
   - {fileID: 89697934}
   m_Father: {fileID: 783585077}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &664369539
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 664369540}
+  - component: {fileID: 664369541}
+  m_Layer: 0
+  m_Name: desert rock crack
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &664369540
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 664369539}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 215038931}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &664369541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 664369539}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 288d9d23376032340a65c4afa83cafdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerType: 2
+  dialogueLines:
+  - 'These weathered rocks are only found in arid deserts. '
+  - When it rains, water seeps into the cracks in the rocks, then evaporates, leaving
+    behind silica
+  - which eventually forms opal. Ah ha!
+  triggerOnce: 1
 --- !u!1 &672259071
 GameObject:
   m_ObjectHideFlags: 0
@@ -7304,54 +7459,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.7383065, y: 0.9860678}
   m_EdgeRadius: 0
---- !u!1 &696647179
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 696647180}
-  - component: {fileID: 696647181}
-  m_Layer: 0
-  m_Name: Image Desert cloud
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &696647180
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 696647179}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1461583807}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &696647181
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 696647179}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 288d9d23376032340a65c4afa83cafdb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  triggerType: 1
-  dialogueLines:
-  - image changed
-  triggerOnce: 1
 --- !u!1 &702353528
 GameObject:
   m_ObjectHideFlags: 0
@@ -7397,7 +7504,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.4528302, g: 0.01751614, b: 0.010679956, a: 0.64705884}
+  m_Color: {r: 0.4528302, g: 0.01751614, b: 0.010679956, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -7664,9 +7771,9 @@ MonoBehaviour:
   targetRenderer: {fileID: 728784159}
   frames:
   - {fileID: 2980781503395290667, guid: 0f099538a7a8f094fa3171ae23ebd83e, type: 3}
-  activateObject: {fileID: 0}
+  activateObject: {fileID: 813774774}
   sfxClip: {fileID: 8300000, guid: 39735624987fe95468815af6d2a2d604, type: 3}
-  onUsedTrigger: {fileID: 696647181}
+  onUsedTrigger: {fileID: 0}
 --- !u!61 &728784158
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8734,7 +8841,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &813774775
 Transform:
   m_ObjectHideFlags: 0
@@ -8810,7 +8917,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Button
   gameScene: {fileID: 783585076}
   targetSceneName: Dessert Rock Crack
-  onClickTrigger: {fileID: 0}
+  onClickTrigger: {fileID: 664369541}
 --- !u!212 &813774778
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9653,7 +9760,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 627.39, y: 187}
+  m_AnchoredPosition: {x: 636.31, y: -57.12}
   m_SizeDelta: {x: 577.0789, y: 175.7867}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &893279057
@@ -10327,7 +10434,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   triggerType: 3
   dialogueLines:
-  - puzzle done
+  - Something seems to have appeared
+  - I think it has something to do with the slots on the computer
   triggerOnce: 1
 --- !u!1 &953329368
 GameObject:
@@ -10550,7 +10658,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 631.85, y: -30}
+  m_AnchoredPosition: {x: 631.85, y: 361}
   m_SizeDelta: {x: 585.99, y: 173.3246}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &966414241
@@ -11887,6 +11995,54 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1060416674}
   m_CullTransparentMesh: 1
+--- !u!1 &1065567358
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1065567360}
+  - component: {fileID: 1065567359}
+  m_Layer: 0
+  m_Name: lighter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1065567359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1065567358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 288d9d23376032340a65c4afa83cafdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerType: 1
+  dialogueLines:
+  - Bingo!
+  triggerOnce: 1
+--- !u!4 &1065567360
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1065567358}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2071399120}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1071685287
 GameObject:
   m_ObjectHideFlags: 0
@@ -11973,7 +12129,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Button
   gameScene: {fileID: 783585076}
   targetSceneName: Poster
-  onClickTrigger: {fileID: 0}
+  onClickTrigger: {fileID: 1893159333}
 --- !u!61 &1081674938
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12460,6 +12616,55 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &1179405931
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1179405932}
+  - component: {fileID: 1179405933}
+  m_Layer: 0
+  m_Name: PC
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1179405932
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1179405931}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 215038931}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1179405933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1179405931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 288d9d23376032340a65c4afa83cafdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerType: 2
+  dialogueLines:
+  - Another set of slots like the ones for the gems earlier
+  - What am I supposed to fill them with this time?
+  triggerOnce: 1
 --- !u!1 &1196936743
 GameObject:
   m_ObjectHideFlags: 0
@@ -13171,7 +13376,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialoguePanel: {fileID: 1415430756}
   dialogueText: {fileID: 1338591006}
-  typingSpeed: 0.02
+  typingSpeed: 0.01
 --- !u!1 &1257464584
 GameObject:
   m_ObjectHideFlags: 0
@@ -13544,8 +13749,8 @@ MonoBehaviour:
   - {fileID: -3894194575458571349, guid: 65ede66bb33a1fc4f825aaa64aa12c0c, type: 3}
   - {fileID: 4743931510800012198, guid: 22d939d5ffe6e6940a999ca580bd1dcc, type: 3}
   activateObject: {fileID: 1690020281}
-  sfxClip: {fileID: 0}
-  onUsedTrigger: {fileID: 0}
+  sfxClip: {fileID: 8300000, guid: 243d2e9a413c267489eda968f0d02fac, type: 3}
+  onUsedTrigger: {fileID: 161819246}
 --- !u!82 &1322821616
 AudioSource:
   m_ObjectHideFlags: 0
@@ -14009,7 +14214,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 63.10193, y: 24.539612, z: 52.584717, w: 31.550964}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -14925,8 +15130,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1221121109}
-  - {fileID: 2006601015}
-  - {fileID: 696647180}
   - {fileID: 947372520}
   - {fileID: 215038931}
   - {fileID: 2071399120}
@@ -16410,6 +16613,59 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1665749608
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1665749609}
+  - component: {fileID: 1665749610}
+  m_Layer: 0
+  m_Name: 'teacher room '
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1665749609
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1665749608}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 215038931}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1665749610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1665749608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 288d9d23376032340a65c4afa83cafdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerType: 2
+  dialogueLines:
+  - 'Where am I now? '
+  - "This room looks familiar\u2026 could it Geo teacher room? I think I\u2019ve
+    been here before."
+  - No, if I really woke up, I should be back in the classroom.
+  - Damn it, I thought I could finally get out of this nightmare
+  - Anyway, I should keep looking for clues to get out
+  triggerOnce: 1
 --- !u!1 &1669209790
 GameObject:
   m_ObjectHideFlags: 0
@@ -16612,8 +16868,8 @@ MonoBehaviour:
   frames:
   - {fileID: 8031180025943266662, guid: 555bf8cf088279f4a82186c7dcde0da3, type: 3}
   activateObject: {fileID: 730426759}
-  sfxClip: {fileID: 0}
-  onUsedTrigger: {fileID: 0}
+  sfxClip: {fileID: 8300000, guid: 7c15cdf40ba0db74490f225790e4a71e, type: 3}
+  onUsedTrigger: {fileID: 1065567359}
 --- !u!61 &1670435597
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17834,7 +18090,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Button
   gameScene: {fileID: 783585076}
   targetSceneName: Stove
-  onClickTrigger: {fileID: 0}
+  onClickTrigger: {fileID: 2119342737}
 --- !u!61 &1719570730
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -18578,7 +18834,7 @@ MonoBehaviour:
   - {fileID: 7833847278638732049, guid: f7ba0ff4f77daad4a9eeda5ec1a37e07, type: 3}
   activateObject: {fileID: 1417041563}
   sfxClip: {fileID: 8300000, guid: 05b36727e28373c4e99d546ea58bb1a9, type: 3}
-  onUsedTrigger: {fileID: 0}
+  onUsedTrigger: {fileID: 294148057}
 --- !u!61 &1772232663
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -19307,6 +19563,55 @@ MonoBehaviour:
   uiToActivate:
   - {fileID: 371630474}
   extraObjectsToActivate: []
+--- !u!1 &1893159331
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1893159332}
+  - component: {fileID: 1893159333}
+  m_Layer: 0
+  m_Name: poster
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1893159332
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1893159331}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 215038931}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1893159333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1893159331}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 288d9d23376032340a65c4afa83cafdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerType: 2
+  dialogueLines:
+  - "I\u2019ve seen this in Geo textbook before"
+  - This is no challenge for me
+  triggerOnce: 1
 --- !u!1 &1941394577
 GameObject:
   m_ObjectHideFlags: 0
@@ -19816,7 +20121,7 @@ GameObject:
   - component: {fileID: 2006601015}
   - component: {fileID: 2006601016}
   m_Layer: 0
-  m_Name: 'dialogue (image) '
+  m_Name: occean
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19835,7 +20140,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1461583807}
+  m_Father: {fileID: 2071399120}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2006601016
 MonoBehaviour:
@@ -19851,7 +20156,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   triggerType: 1
   dialogueLines:
-  - image changed
+  - Wow, this tiny bucket actually held all the seawater!
+  - A scallop has appeared on the beach. Geo teacher said that such scallops are
+    likely to contain pearls
+  - "How do I open it? I think I\u2019ll need something sharp"
   triggerOnce: 1
 --- !u!1 &2038816872
 GameObject:
@@ -20100,6 +20408,10 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1759720129}
+  - {fileID: 294148056}
+  - {fileID: 2006601015}
+  - {fileID: 161819245}
+  - {fileID: 1065567360}
   m_Father: {fileID: 1461583807}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2073549094
@@ -20150,7 +20462,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Button
   gameScene: {fileID: 783585076}
   targetSceneName: PC
-  onClickTrigger: {fileID: 0}
+  onClickTrigger: {fileID: 1179405933}
 --- !u!61 &2073549097
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -20504,6 +20816,55 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &2119342735
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2119342736}
+  - component: {fileID: 2119342737}
+  m_Layer: 0
+  m_Name: stove
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2119342736
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2119342735}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 215038931}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2119342737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2119342735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 288d9d23376032340a65c4afa83cafdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerType: 2
+  dialogueLines:
+  - "I\u2019m a bit thirsty\u2026 I\u2019d like some hot water"
+  - Can I use this stove to boil some?
+  triggerOnce: 1
 --- !u!1 &2129208840
 GameObject:
   m_ObjectHideFlags: 0
