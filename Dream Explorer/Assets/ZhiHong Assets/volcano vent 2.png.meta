@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 8b111eb5033c3494eb3637cf3f408ac3
+guid: f7ba0ff4f77daad4a9eeda5ec1a37e07
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 761100573506273824
-    second: knife_0
+      213: 7833847278638732049
+    second: volcano vent 2_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 150
+  spritePixelsToUnits: 180
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: knife_0
+      name: volcano vent 2_0
       rect:
         serializedVersion: 2
-        x: 52
-        y: 29
-        width: 407
-        height: 442
+        x: 0
+        y: 0
+        width: 2400
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 022003a60f8ff8a00800000000000000
-      internalID: 761100573506273824
+      spriteID: 1131ceb289a67bc60800000000000000
+      internalID: 7833847278638732049
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      knife_0: 761100573506273824
+      volcano vent 2_0: 7833847278638732049
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

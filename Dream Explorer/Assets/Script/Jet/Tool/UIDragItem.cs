@@ -41,37 +41,37 @@ public class UIDragItem : MonoBehaviour,
     {
         canvasGroup.blocksRaycasts = true;
 
-        // ⭐ 核心：获取所有命中的对象（而不是 pointerEnter）
         List<RaycastResult> results = new List<RaycastResult>();
         EventSystem.current.RaycastAll(eventData, results);
 
-        bool usedAny = false;
+        bool snapped = false;
 
         foreach (var hit in results)
         {
-            // ① 拼图吸附（如果你有）
+            // ① UISnapTarget
             var snapTarget = hit.gameObject.GetComponent<UISnapTarget>();
             if (snapTarget != null &&
                 (string.IsNullOrEmpty(snapTarget.acceptToolID) ||
                  snapTarget.acceptToolID == toolID))
             {
                 snapTarget.Snap(this);
-                ReturnToSlot();
-                return;
+                snapped = true;
+                break;   // ⭐ 已吸附，直接结束检测
             }
 
-            // ② DropTarget（⭐ 可多个）
+            // ② DropTarget（保留你原本逻辑）
             var dropTarget = hit.gameObject.GetComponent<DropTarget>();
             if (dropTarget != null && dropTarget.acceptToolID == toolID)
             {
                 dropTarget.PlayReplaceAnimation();
-                usedAny = true;
             }
         }
 
-        // 无论命中 0 个还是多个，最后都回槽
-        ReturnToSlot();
+        // ⭐ 只有“没有吸附”才回工具栏
+        if (!snapped)
+            ReturnToSlot();
     }
+
 
     public void ReturnToSlot()
     {
