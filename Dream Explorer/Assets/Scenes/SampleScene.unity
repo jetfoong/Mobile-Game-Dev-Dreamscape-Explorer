@@ -545,8 +545,8 @@ Transform:
   m_GameObject: {fileID: 42425160}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1055.31, y: -581.35, z: 0}
-  m_LocalScale: {x: 0.65699303, y: 0.61303365, z: 1}
+  m_LocalPosition: {x: -1055.68, y: -581.76, z: 0}
+  m_LocalScale: {x: 0.46173468, y: 0.4519284, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 591667425}
@@ -19269,7 +19269,7 @@ MonoBehaviour:
   acceptToolID: knife
   targetRenderer: {fileID: 1953554296}
   frames:
-  - {fileID: 3527507958780156600, guid: e7a5da6822d253748ad940270d9bd2a2, type: 3}
+  - {fileID: 3836439204189473009, guid: b7d5557bfeddf5647b98881bd176d215, type: 3}
   activateObject: {fileID: 42425160}
   sfxClip: {fileID: 0}
   onUsedTrigger: {fileID: 0}
